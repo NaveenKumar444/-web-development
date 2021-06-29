@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>carousel</title>
+        <link rel="stylesheet" href="../fontaws/css/all.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </head>
+    <body>
+        <div id="carouselDemo" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--carousel indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carouselDemo" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselDemo" data-slide-to="1" class="active"></li>
+                <li data-target="#carouselDemo" data-slide-to="2" class="active"></li>
+            </ol>
+            <!--indicators ends here-->
+            <div class="carousel-inner"> 
+                <div class="carousel-item active" data-interval="1000">
+                    <img src="../image/banner.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-interval="1000">
+                    <img src="../image/s3.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-interval="1000">
+                    <img src="../image/s2.jpg" class="d-block w-100">
+                </div>
+            </div>
+            <!--carousel controls-->
+            <a href="#carouselDemo" role="button" data-slide="prev" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#carouselDemo" role="button" data-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </body>
+</html>

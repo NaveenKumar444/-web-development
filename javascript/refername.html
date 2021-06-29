@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>name Refer</title>
+        <script type="text/javascript">
+            function bodyload(){
+                pic.src="../image/redmi.jpeg";
+                frmRegister.btnregister.value="Register";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div>
+            <img name="pic" width="100" height="100" border="1">
+        </div>
+        <div>
+            <h2>Register</h2>
+            <form name="frmRegister">
+                User Name:
+                <input name="txtname" type="text">
+                <input name="btnregister" type="button">
+            </form>
+        </div>
+    </body>
+</html>

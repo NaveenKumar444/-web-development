@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClassName Refer</title>
+        <script type="text/javascript">
+            function bodyload(){
+                x = document.getElementsByClassName("effects")
+                alert("count:" + x.length);
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div>
+            <img id="pic" width="100" height="100" border="1">
+        </div>
+        <div>
+            <h2>Register</h2>
+            <form id="frmRegister">
+                User Name:
+                <input class="effects" id="txtname" type="text">
+                <input class="effects" id="btnregister" type="button">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>confirm</title>
+        <style>
+            .effects{
+                background-color:yellow;
+            }
+        </style>
+        <script type="text/javascript">
+            function DeleteClick(){
+                x = confirm("Are you sure want to Delete?");
+                if(x==true){
+                    alert("Record Deleted");
+                }else{
+                    alert("canceled");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button class="effects" onclick="DeleteClick()">Delete</button>
+    </body>
+</html>

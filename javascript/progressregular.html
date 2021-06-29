@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular Expression</title>
+        <script>
+            function VerifyPassword(){
+                var pwd = document.getElementById("txtpwd").value; 
+                var regExp = /(?=.*[A-Z])\w{4,10}/;
+                var msg = document.getElementById("msg");
+                var grade = document.getElementById("grade");
+                grade.style.display = "block";
+            function DisplayGrade(min, max, val){
+                grade.min= min;
+                grade.max= max;
+                grade.value = val;
+            }
+            if(pwd.match(regExp)) {
+                msg.innerHTML = "Strong Password";
+                DisplayGrade(1,100,100);
+            } else {
+                if(pwd.length<4){
+                    msg.innerHTML = "Poor Password";
+                    DisplayGrade(1,100,20);
+                 } else {
+                    msg.innerHTML = "Weak Password";
+                    DisplayGrade(1,100,70);
+                }
+            }
+         }
+        </script>
+        <style>
+            meter {
+            height: 30px;
+            width: 100%;
+            }
+        </style>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body class="container-fluid">
+        <fieldset>
+            <legend>Verify Passsword</legend>
+            <div>
+                <input class="form-control" onkeyup="VerifyPassword()" type="password" id="txtpwd">
+                <progress style="display: none;" min="1" max="100" value="0" id="grade"></progress>
+                <div id="msg"></div>
+            </div>
+        </fieldset>
+    </body>
+</html>

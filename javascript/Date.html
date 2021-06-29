@@ -1,0 +1,23 @@
+<script>
+    function f1(){
+    var mfd = new Date("2020-03-10");
+    mfd.setDate(11);
+    mfd.setMonth(1);
+    mfd.setFullYear(2021);
+    var days = ["Sun","Monday","Tuesday", 
+   "Wednesday","Thu","Fri","Sat"];
+    var months = ["Jan","Feb","March","Apr","May"];
+    document.write(`
+    Day : ${mfd.getDate()}
+    <br>
+    Week Day : ${days[mfd.getDay()]}
+    <br>
+    Month : ${months[mfd.getMonth()]} 
+    <br>
+    Year : ${mfd.getFullYear()}
+    <br>
+    Date : ${mfd.toDateString()}
+    `);
+    }
+    f1();
+</script>

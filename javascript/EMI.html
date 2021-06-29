@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Naveen.EMI</title>
+        <link rel="stylesheet" href="../fontaws/css/all.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script>
+            function n1change(){
+                document.getElementById("txtnumber1").value = document.getElementById("txtN1").value
+            }
+            function n2change(){
+                document.getElementById("txtnumber2").value = document.getElementById("txtN2").value
+            }
+            function n3change(){
+                document.getElementById("txtnumber3").value = document.getElementById("txtN3").value
+            }
+            function emi(){
+                var p= Number(document.getElementById("txtnumber1").value);
+                var n= Number(document.getElementById("txtnumber2").value);
+                var r= Number(document.getElementById("txtnumber3").value);
+                var a= p*r*((1+r)**n)/(1-(1+r)**n);
+                document.getElementById("result").value= a;
+            }
+        </script>
+        <style>
+            .box{
+                background-color: rgb(30, 30, 85);
+                color: white;
+            }
+        </style>
+    </head>
+    <body class="box">
+        <font><h1 class="text-center text-danger mb-5">EMI CALCULATOR</h1></font>
+        <div class="container-fluid d-lg-flex ml-md-5">
+            <div class="ml-5">
+                Amount you need &#8377;<input type="number" id="txtnumber1">
+                <br>
+                <input onchange="n1change()" id=txtN1 type="range" min="1" max="400000">
+            </div>
+            <div class="ml-5">
+                for<input type="number" id="txtnumber2">Months
+                <br>
+                <input onchange="n2change()" id=txtN2 type="range" min="1" max="60">
+            </div>
+            <div class="ml-5">
+                Interest rate<input type="number" id="txtnumber3">%
+                <br>
+                <input onchange="n3change()" id=txtN3 type="range" min="1" max="21">
+                <br>
+                <button onclick="emi()" class="btn btn-success  mt-4">Calculate</button>
+                <br>
+                <input class="mt-4" id="result">
+            </div>
+        </div>
+    </body>
+</html>

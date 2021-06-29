@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String</title>
+        <script>
+            function Calculate(){
+                var tx1 = document.getElementById("tx1").value;
+                var tx2 = document.getElementById("tx2").value;
+                document.getElementById("result").innerHTML = parseFloat(tx1) + parseFloat(tx2);
+            }
+        </script>
+    </head>
+    <body>
+        <dl>
+            <dt>Number-1</dt>
+            <dd><input id="tx1" type="text"></dd>
+            <dt>Number-2</dt>
+            <dd><input id="tx2" type="text"></dd>
+        </dl>
+        <button onclick="Calculate()">Calculate</button>
+        <h2 id="result"></h2>
+    </body>
+</html>

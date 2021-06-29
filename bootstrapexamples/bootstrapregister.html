@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bootstrap Alert</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </head>
+    <body class="container-fluid">
+        <button data-toggle="modal" data-target="#login">Login</button>
+        <button data-toggle="modal" data-target="#register">Register</button>
+        <div class="modal fade" id="login">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-success text-white">
+                        <h3>User login</h3>
+                        <button data-dismiss="modal" class="close">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>User name</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>password</dt>
+                            <dd>
+                                <input type="password">
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer bg-success text-white">
+                        <button>login</button>
+                        <button data-dismiss="modal">cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="register">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-success text-white">
+                        <h3>Register</h3>
+                        <button data-dismiss="modal" class="close">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>User name</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>password</dt>
+                            <dd>
+                                <input type="password">
+                            </dd>
+                            <dt>E-mail</dt>
+                            <dd>
+                                <input type="email">
+                            </dd>
+                            <dt>Date of birth</dt>
+                            <dd>
+                                <input type="date">
+                            </dd>
+                            <dt>University</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Roll Number</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Qualification</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Stream</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                            <dt>Aggregate</dt>
+                            <dd>
+                                <input pattern="[0-9]" type="text">
+                            </dd>
+                            <dt>Certifications</dt>
+                            <dd>
+                                <input type="text">
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer bg-success text-white">
+                        <button>Register</button>
+                        <button data-dismiss="modal">cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

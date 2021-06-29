@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../fontaws/css/all.css">
+        <style>
+            .container-fluid{
+                width: 90%;
+            }
+            #section{
+                height: 400px;
+                margin-top: 30px;
+            }
+            #navpanel{
+                border-right: 2px dotted;
+            }
+            .col-6{
+                padding: 20px;
+            }
+            h1{
+                text-align: center;
+            }
+            #header,#footer{
+                background-color: darkcyan;
+                color: white;
+            }
+            #footer{
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <div class="row" id="header">
+            <div class="col">
+                <h1><span class="fa fa-shopping-cart"></span>Amazon Shopping</h1>
+            </div>
+        </div>
+        <div class="row" id="section">
+            <div class="col-2" id="navpanel">
+                <ul>
+                    <li>Home</li>
+                    <li>electronics</li>
+                    <li>footwear</li>
+                </ul>
+            </div>
+            <div class="col-7">
+                <h2>Amazon Home</h2>
+                <img src="../image/s1.jpg" width="100" height="100">
+                <img src="../image/s2.jpg" width="100" height="100">
+                <img src="../image/s3.jpg" width="100" height="100">
+            </div>
+            <div class="col-3">
+                <h3>Your cart summary</h3>
+                <dl>
+                    <dt>total items</dt>
+                    <dd>3</dd>
+                    <dt>Total Amount</dt>
+                    <dd>&#8377;3400.55</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row" id="footer">
+            <div class="col">
+                <div class="text-center">&copy;copyright Amazon 2021</div>
+            </div>
+        </div>
+    </body>
+</html>

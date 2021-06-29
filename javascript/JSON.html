@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prodcuts</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../fontaws/css/all.css">
+        <script>
+            var products = [
+                {Name: "Mobile", Price:9500.44, Photo:"../image/redmi.jpeg"},
+                {Name: "Car", Price:450000, Photo:"../image/s1.jpg"},
+                {Name: "Bike", Price:150000, Photo:"../image/s2.jpg"},
+                {Name: "Bed", Price:2000, Photo:"../image/home.jpg"}
+            ];
+            var count=0;
+            function LoadDetails(index){
+                document.getElementById("lblName").innerHTML = products[index].Name;
+                document.getElementById("productImg").src = products[index].Photo;
+                document.getElementById("lblPrice").innerHTML=products[index].Price;
+            }
+            function bodyload(){
+                LoadDetails(count);
+            }
+            function NextClick(){
+                count++;
+                LoadDetails(count);
+            }
+            function PreviousClick(){
+                count--;
+                LoadDetails(count);
+            }
+            function SliderChange(){
+                var val = document.getElementById("txtRange").value;
+                LoadDetails(val);
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="text-center container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 id="lblName"></h3>
+            </div>
+            <div class="card-body">
+                <button onclick="PreviousClick()" class="btn btn-success"> < </button>
+                <img id="productImg" width="400" height="300">
+                <button onclick="NextClick()" class="btn btn-success"> > </button>
+            </div>
+            <div class="card-footer">
+                <h3 id="lblPrice"></h3>
+                <input id="txtRange" onchange="SliderChange()" type="range" min="0" max="4" value="0" class="form-control-range">
+            </div>
+        </div>
+    </body>
+</html>

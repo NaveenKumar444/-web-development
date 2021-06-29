@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>buttons using bootstrap</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            button:disabled {
+            cursor:not-allowed;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <h2>Button contextual</h2>
+        <button disabled class="btn btn-success disabled">insert</button>
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-info">Update</button>
+        <h2>Button outline contextual</h2>
+        <button  class="btn btn-outline-success">insert</button>
+        <button class="btn btn-outline-danger">Delete</button>
+        <button class="btn btn-outline-info">Update</button>
+        <h2>Button size</h2>
+        <button class="btn btn-primary btn-sm">small</button>
+        <button class="btn btn-primary btn-lg">large</button>
+        <h2>Block</h2>
+        <button class="btn btn-primary btn-block">Block</button>
+        <h2>predefined</h2>
+        <button class="btn btn-link">login</button>
+    </body>
+</html>
